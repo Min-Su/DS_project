@@ -20,3 +20,33 @@ bool Stack::is_full() {
 	else
 		return false;
 }
+
+void Stack::push(int element) {
+	if(is_full()) {
+		cout << "Stack is full" << endl;
+	}
+	else {
+		this->top++;
+		this->stack[top] = element;
+	}
+}
+
+int Stack::pop() {
+	if(is_empty()) {
+		cout << "Stack is empty" << endl;
+	}
+	else {
+		int e;
+		e = this->stack[this->top];
+		this->top--;
+		return e;
+	}
+}
+
+int Stack::peek() {
+	if(is_empty()) {
+		cout << "Stack is empty" << endl;
+	}
+	else
+		return this->stack[this->top];
+}
