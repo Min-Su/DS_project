@@ -15,6 +15,7 @@ public:
 	void push(T element);
 	T pop();
 	T peek();
+	T* getStack();
 };
 
 #endif

@@ -8,7 +8,6 @@ using namespace std;
 
 Stackmanager::Stackmanager() {
 	this->input = 0;
-	this->stack = new Stack();
 }
 
 void Stackmanager::menu() {
@@ -25,14 +24,44 @@ void Stackmanager::input_Number() {
 
 void Stackmanager::checkmatching(string expr) {
 	int i = 0;
-	char ch;
+	char open_ch, ch;
+	Stack<char> *stack = new Stack<char>();
 	while(expr[i] != NULL) {
 		ch = expr[i];
 
 		switch(ch) {
 			case '(' : case '{' : case '[' :
-				stack->push(
+				stack->push(ch);
+				break;
+
+			case ')' : case '}' : case ']' :
+				if(stack->is_empty()) {
+					cout << "Error" << endl;
+					return;
+				}
+				else {
+					open_ch = stack->pop();
+					if(ch != open_ch) {
+						cout << "Bracket not same" << endl;
+						return;
+					}
+					else {}
+				}
 				break;
 		}
+	}
+	cout << stack->getStack() << endl;
+	cout << "올바른 수식입니다. " << endl;
+}
+
+void Stackmanager::run() {
+	menu();
+	input_Number();
+
+	switch(this->input) {
+		case 1 : 
+			cout << "괄호가 포함된 수식을 입력해주세요 >>";
+			cin >> this->str;
+			checkmatching(this->str);
 	}
 }

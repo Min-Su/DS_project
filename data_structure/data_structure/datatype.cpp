@@ -56,3 +56,8 @@ T Stack<T>::peek() {
 	else
 		return this->stack[this->top];
 }
+
+template <class T>
+T* Stack<T>::getStack() {
+	return this->stack;
+}

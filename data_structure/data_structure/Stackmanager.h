@@ -6,7 +6,6 @@
 class Stackmanager {
 private:
 	int input;
-	Stack *stack;
 	string str;
 public:
 	Stackmanager();
