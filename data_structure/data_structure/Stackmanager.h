@@ -12,6 +12,7 @@ public:
 	void menu();
 	void input_Number();
 	void checkmatching(string expr);
+
 	void run();
 };
 
