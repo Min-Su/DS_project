@@ -3,25 +3,29 @@ using namespace std;
 
 #include"datatype.h"
 
-Stack::Stack() {
+template <class T>
+Stack<T>::Stack() {
 	this->top = -1;
 }
 
-bool Stack::is_empty() {
+template <class T>
+bool Stack<T>::is_empty() {
 	if(this->top == -1)
 		return true;
 	else
 		return false;
 }
 
-bool Stack::is_full() {
+template <class T>
+bool Stack<T>::is_full() {
 	if(this->top == MAX_SIZE - 1)
 		return true;
 	else
 		return false;
 }
 
-void Stack::push(int element) {
+template <class T>
+void Stack<T>::push(T element) {
 	if(is_full()) {
 		cout << "Stack is full" << endl;
 	}
@@ -31,7 +35,8 @@ void Stack::push(int element) {
 	}
 }
 
-int Stack::pop() {
+template <class T>
+T Stack<T>::pop() {
 	if(is_empty()) {
 		cout << "Stack is empty" << endl;
 	}
@@ -43,7 +48,8 @@ int Stack::pop() {
 	}
 }
 
-int Stack::peek() {
+template <class T>
+T Stack<T>::peek() {
 	if(is_empty()) {
 		cout << "Stack is empty" << endl;
 	}

@@ -3,17 +3,18 @@
 
 #define MAX_SIZE 100
 
+template <class T>
 class Stack {
 private:
 	int top;
-	int stack[MAX_SIZE];
+	T stack[MAX_SIZE];
 public:
 	Stack();
 	bool is_empty();
 	bool is_full();
-	void push(int element);
-	int pop();
-	int peek();
+	void push(T element);
+	T pop();
+	T peek();
 };
 
 #endif

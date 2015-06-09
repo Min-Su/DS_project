@@ -21,12 +21,18 @@
     <ClInclude Include="UImanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Stackmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="datatype.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UImanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Stackmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -15,7 +15,7 @@ void UImanager::input_Number() {
 void UImanager::menu() {
 	cout << "1. Stack" << endl;
 	cout << "2. List" << endl;
-	cout << "3. Que" << endl;
+	cout << "3. Queue" << endl;
 	cout << "4. Tree" << endl;
 	cout << "5. Exit" << endl;
 	cout << "Select the Number >>";

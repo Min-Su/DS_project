@@ -76,10 +76,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="datatype.h" />
+    <ClInclude Include="Stackmanager.h" />
     <ClInclude Include="UImanager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="datatype.cpp" />
+    <ClCompile Include="Stackmanager.cpp" />
     <ClCompile Include="UImanager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
