@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "data_structure", "data_structure\data_structure.vcxproj", "{85A644D2-7496-4C1B-84E9-53B2FCA48EAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85A644D2-7496-4C1B-84E9-53B2FCA48EAC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{85A644D2-7496-4C1B-84E9-53B2FCA48EAC}.Debug|Win32.Build.0 = Debug|Win32
+		{85A644D2-7496-4C1B-84E9-53B2FCA48EAC}.Release|Win32.ActiveCfg = Release|Win32
+		{85A644D2-7496-4C1B-84E9-53B2FCA48EAC}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

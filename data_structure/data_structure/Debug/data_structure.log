@@ -1,0 +1,11 @@
+﻿Build started 2015-06-09 오후 2:11:09.
+     1>Project "C:\Users\1602\DS_project\data_structure\data_structure\data_structure.vcxproj" on node 2 (ClCompile target(s)).
+     1>ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt datatype.cpp
+         Skipping... (no relevant changes detected)
+         datatype.cpp
+     1>Done Building Project "C:\Users\1602\DS_project\data_structure\data_structure\data_structure.vcxproj" (ClCompile target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.20
