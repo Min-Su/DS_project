@@ -12,9 +12,8 @@ Stackmanager::Stackmanager() {
 
 void Stackmanager::menu() {
 	cout << "1. Bracket Test" << endl;
-	cout << "2. Fomula Calculation" << endl;
-	cout << "3. Maze Search" << endl;
-	cout << "4. Back" << endl;
+	cout << "2. Maze Search" << endl;
+	cout << "3. Back" << endl;
 	cout << "Input Number >>" << endl;
 }
 
@@ -55,13 +54,24 @@ void Stackmanager::checkmatching(string expr) {
 }
 
 void Stackmanager::run() {
-	menu();
-	input_Number();
+	
+	while(1) {
+		menu();
+		input_Number();
 
-	switch(this->input) {
-		case 1 : 
-			cout << "괄호가 포함된 수식을 입력해주세요 >>";
-			cin >> this->str;
-			checkmatching(this->str);
+		switch(this->input) {
+			case 1 : 
+				cout << "괄호가 포함된 수식을 입력해주세요 >>";
+				cin >> this->str;
+				checkmatching(this->str);
+
+			case 2 :
+				break;
+
+			case 3 :
+				return;
+				break;
+		}
+
 	}
 }
