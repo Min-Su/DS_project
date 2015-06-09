@@ -18,4 +18,20 @@ public:
 	T* getStack();
 };
 
+//LinkedList scope
+
+typedef struct ListNode {
+	int data;
+	struct ListNode *link;
+}ListNode;
+
+class LinkedList {
+private:
+	ListNode **phead;
+	ListNode *p;
+public:
+	LinkedList();
+	void createNode(int data);
+};
+
 #endif

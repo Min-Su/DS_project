@@ -51,6 +51,7 @@ void Stackmanager::checkmatching(string expr) {
 	}
 	cout << stack->getStack() << endl;
 	cout << "올바른 수식입니다. " << endl;
+	delete stack;
 }
 
 void Stackmanager::run() {
