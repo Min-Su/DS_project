@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-﻿Build started 2015-06-09 오후 7:26:29.
-=======
-﻿Build started 2015-06-09 오후 6:45:02.
->>>>>>> 56deed30627e4b7befe32f44e7e4c87fc160dded
+﻿Build started 2015-06-10 오후 4:21:37.
      1>Project "C:\Users\1602\DS_project\data_structure\data_structure\data_structure.vcxproj" on node 2 (ClCompile target(s)).
      1>ClCompile:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Stackmanager.cpp
-         Stackmanager.cpp
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt UImanager.cpp
+         Skipping... (no relevant changes detected)
+         UImanager.cpp
      1>Done Building Project "C:\Users\1602\DS_project\data_structure\data_structure\data_structure.vcxproj" (ClCompile target(s)).
 
 Build succeeded.
 
-<<<<<<< HEAD
-Time Elapsed 00:00:01.64
-=======
-Time Elapsed 00:00:01.43
->>>>>>> 56deed30627e4b7befe32f44e7e4c87fc160dded
+Time Elapsed 00:00:00.08

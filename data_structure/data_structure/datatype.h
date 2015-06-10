@@ -20,18 +20,22 @@ public:
 
 //LinkedList scope
 
-typedef struct ListNode {
+typedef struct ListNodeType {
 	int data;
-	struct ListNode *link;
-}ListNode;
+	struct ListNodeType *link;
+}ListNodeType;
 
 class LinkedList {
 private:
-	ListNode **phead;
-	ListNode *p;
+	ListNodeType *phead;
+	int count;
 public:
 	LinkedList();
-	void createNode(int data);
+	ListNodeType* createNode(int data);
+	void add_Node(int data);
+	int node_delete(int data);
+	ListNodeType* node_search(int data);
+	void display_node();
 };
 
 #endif
