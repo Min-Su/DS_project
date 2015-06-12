@@ -125,3 +125,50 @@ void LinkedList::display_node() {
 		printf("\n");
 	}
 }
+
+//Queue scope
+
+Queue::Queue() {
+	this->front = 0;
+	this->rear = 0;
+}
+
+bool Queue::is_empty() {
+	if(this->front == this->rear) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+bool Queue::is_full() {
+	if(this->front == ((this->rear + 1)%MAX_SIZE)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+void Queue::enqueue(int item) {
+	if(is_full()) {
+		cout << "Queue is full" << endl;
+		return;
+	}
+	else {
+		this->rear = (this->rear + 1)%MAX_SIZE;
+		this->queue[this->rear] = item;
+	}
+}
+
+int Queue::dequeue() {
+	if(is_empty()) {
+		cout << "Queue is empty" << endl;
+		return 0;
+	}
+	else {
+		this->front = (this->front + 1)%MAX_SIZE;
+		return this->queue[this->front];
+	}
+}

@@ -95,4 +95,19 @@ public:
 	void display_node();
 };
 
+//Queue scope
+
+class Queue {
+private:
+	int front;
+	int rear;
+	int queue[MAX_SIZE];
+public:
+	Queue();
+	bool is_empty();
+	bool is_full();
+	void enqueue(int item);
+	int dequeue();
+};
+
 #endif
