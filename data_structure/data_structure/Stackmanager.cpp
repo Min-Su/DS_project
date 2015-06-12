@@ -24,22 +24,22 @@ void Stackmanager::input_Number() {
 void Stackmanager::checkmatching(string expr) {
 	int i = 0;
 	char open_ch, ch;
-	Stack<char> *stack = new Stack<char>();
+	Stack<char> stack;
 	while(expr[i] != NULL) {
 		ch = expr[i];
 
 		switch(ch) {
 			case '(' : case '{' : case '[' :
-				stack->push(ch);
+				stack.push(ch);
 				break;
 
 			case ')' : case '}' : case ']' :
-				if(stack->is_empty()) {
+				if(stack.is_empty()) {
 					cout << "Error" << endl;
 					return;
 				}
 				else {
-					open_ch = stack->pop();
+					open_ch = stack.pop();
 					if(ch != open_ch) {
 						cout << "Bracket not same" << endl;
 						return;
@@ -49,9 +49,8 @@ void Stackmanager::checkmatching(string expr) {
 				break;
 		}
 	}
-	cout << stack->getStack() << endl;
+	cout <<  endl;
 	cout << "올바른 수식입니다. " << endl;
-	delete stack;
 }
 
 void Stackmanager::run() {
