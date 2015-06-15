@@ -114,18 +114,21 @@ public:
 class Tree_node {
 public:
 	int data;
+	int number;
 	Tree_node *left;
 	Tree_node *right;
 };
-
+// Complete Binary Tree
 class Binary_Tree {
 private:
 	Tree_node *root;
 	Tree_node *p;	// last inserted node pointer
+	Stack<int> *stack;	// Insert to Parent node
+	int count;	
 public:
 	Binary_Tree();
 	~Binary_Tree();
-	Tree_node *create_Node(int data);
+	Tree_node *create_Node(int data, int number);
 	void insert_TreeNode();
 	int delete_TreeNode();
 	void destroy_Tree();

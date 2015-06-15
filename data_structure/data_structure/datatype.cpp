@@ -178,24 +178,50 @@ int Queue::dequeue() {
 Binary_Tree::Binary_Tree() {
 	this->root = NULL;
 	this->p = NULL;
+	this->count = 0;
+	this->stack = new Stack<int>;
 }
 
 Binary_Tree::~Binary_Tree() {
-
+	delete stack;
 }
 
-Tree_node* Binary_Tree::create_Node(int data) {
+Tree_node* Binary_Tree::create_Node(int data, int number) {
 	Tree_node *temp;
 	temp = new Tree_node();
 	
 	if(temp == NULL) {
 		cout << "Create Error !!! " << endl;
-		return NULL;
+		exit(0);
 	}
 	else {
 		temp->data = data;
+		temp->number = number;
 		return temp;
 	}
+}
+
+void Binary_Tree::insert_TreeNode() {
+	int data;
+	this->count++;
+
+	cin >> data;
+	if(this->root == NULL) {
+		this->root = create_Node(data, this->count);
+		this->p = this->root;
+	}
+	else {
+		if(this->p->left == NULL) {
+			this->p->left = create_Node(data, this->count);
+		}
+		else {
+			this->p->right = create_Node(data, this->count);
+		}
+	}
+}
+
+int Binary_Tree::delete_TreeNode() {
+	return 1;
 }
 
 
