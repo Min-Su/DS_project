@@ -110,4 +110,25 @@ public:
 	int dequeue();
 };
 
+//Tree scope
+class Tree_node {
+public:
+	int data;
+	Tree_node *left;
+	Tree_node *right;
+};
+
+class Binary_Tree {
+private:
+	Tree_node *root;
+	Tree_node *p;	// last inserted node pointer
+public:
+	Binary_Tree();
+	~Binary_Tree();
+	Tree_node *create_Node(int data);
+	void insert_TreeNode();
+	int delete_TreeNode();
+	void destroy_Tree();
+};
+
 #endif

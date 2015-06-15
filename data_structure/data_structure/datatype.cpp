@@ -172,3 +172,31 @@ int Queue::dequeue() {
 		return this->queue[this->front];
 	}
 }
+
+// Tree scope
+
+Binary_Tree::Binary_Tree() {
+	this->root = NULL;
+	this->p = NULL;
+}
+
+Binary_Tree::~Binary_Tree() {
+
+}
+
+Tree_node* Binary_Tree::create_Node(int data) {
+	Tree_node *temp;
+	temp = new Tree_node();
+	
+	if(temp == NULL) {
+		cout << "Create Error !!! " << endl;
+		return NULL;
+	}
+	else {
+		temp->data = data;
+		return temp;
+	}
+}
+
+
+
