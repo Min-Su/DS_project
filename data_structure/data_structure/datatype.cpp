@@ -270,5 +270,13 @@ int Binary_Tree::delete_TreeNode() {
 	return temp;
 }
 
+void Binary_Tree::destroy_Tree(Tree_node *root) {
+	if(root) {
+		destroy_Tree(root->left);
+		destroy_Tree(root->right);
+		delete root;
+	}
+}
+
 
 

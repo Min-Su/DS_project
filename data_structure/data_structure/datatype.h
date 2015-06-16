@@ -130,7 +130,7 @@ public:
 	Tree_node *create_Node(int data, int number);
 	void insert_TreeNode();
 	int delete_TreeNode();	// last Leaf Node delete
-	void destroy_Tree();
+	void destroy_Tree(Tree_node *root);
 };
 
 #endif
