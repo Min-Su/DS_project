@@ -7,9 +7,9 @@
 template <class T>
 class Stack {
 private:
-	int top;
 	T stack[MAX_SIZE];
 public:
+	int top;
 	Stack();
 	bool is_empty();
 	bool is_full();
@@ -122,15 +122,14 @@ public:
 class Binary_Tree {
 private:
 	Tree_node *root;
-	Tree_node *p;	// last inserted node pointer
-	Stack<int> *stack;	// Insert to Parent node
+	Stack<int> *parent_stack;	// Insert to Parent node
 	int count;	
 public:
 	Binary_Tree();
 	~Binary_Tree();
 	Tree_node *create_Node(int data, int number);
 	void insert_TreeNode();
-	int delete_TreeNode();
+	int delete_TreeNode();	// last Leaf Node delete
 	void destroy_Tree();
 };
 

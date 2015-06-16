@@ -177,13 +177,12 @@ int Queue::dequeue() {
 
 Binary_Tree::Binary_Tree() {
 	this->root = NULL;
-	this->p = NULL;
 	this->count = 0;
-	this->stack = new Stack<int>;
+	this->parent_stack = new Stack<int>;
 }
 
 Binary_Tree::~Binary_Tree() {
-	delete stack;
+	delete parent_stack;
 }
 
 Tree_node* Binary_Tree::create_Node(int data, int number) {
@@ -203,25 +202,72 @@ Tree_node* Binary_Tree::create_Node(int data, int number) {
 
 void Binary_Tree::insert_TreeNode() {
 	int data;
+	int parent_node;
+	Tree_node *p;
 	this->count++;
-
+	
 	cin >> data;
 	if(this->root == NULL) {
-		this->root = create_Node(data, this->count);
-		this->p = this->root;
+		this->root = create_Node(data, this->count);	// this->count == TreeNode Numbering 
 	}
 	else {
-		if(this->p->left == NULL) {
-			this->p->left = create_Node(data, this->count);
+		p = this->root;
+		parent_node = this->count;
+
+		while(parent_node != 1) {
+			this->parent_stack->push(parent_node/2);	
+		}
+		
+		while(this->parent_stack->top != -1) {
+			if(p->left->number == this->parent_stack->pop()) {
+				p = p->left;
+			}
+			else if(p->right->number == this->parent_stack->pop()) {
+				p = p->right;
+			}
+		}
+
+		if((this->count%2) == 0) {
+			p->left = create_Node(data, this->count);
 		}
 		else {
-			this->p->right = create_Node(data, this->count);
+			p->right = create_Node(data, this->count);
 		}
 	}
 }
 
 int Binary_Tree::delete_TreeNode() {
-	return 1;
+	
+	Tree_node *p;
+	int parent_node;
+	int temp;
+
+	p = this->root;
+	parent_node = this->count;
+
+	while(parent_node != 1) {
+		this->parent_stack->push(parent_node/2);	
+	}
+		
+	while(this->parent_stack->top != -1) {
+		if(p->left->number == this->parent_stack->pop()) {
+			p = p->left;
+		}
+		else if(p->right->number == this->parent_stack->pop()) {
+			p = p->right;
+		}
+	}
+
+	if(p->right->number == this->count) {
+		temp = p->right->data;
+		delete p->right;
+	}
+	else {
+		temp = p->left->data;
+		delete p->left;
+	}
+
+	return temp;
 }
 
 
