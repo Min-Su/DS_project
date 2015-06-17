@@ -1,10 +1,4 @@
-#include<iostream>
-#include<string>
-
-using namespace std;
-
 #include"Stackmanager.h"
-
 
 Stackmanager::Stackmanager() {
 	this->input = 0;
@@ -69,7 +63,10 @@ void Stackmanager::run() {
 				break;
 
 			case 3 :
-				return;
+				break;
+
+			default:
+				cout << "Input is unavailable" << endl;
 				break;
 		}
 

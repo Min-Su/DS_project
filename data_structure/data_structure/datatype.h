@@ -1,6 +1,11 @@
 #ifndef __DATATYPE_H__
 #define __DATATYPE_H__
 
+#include<iostream>
+#include<string>
+
+using namespace std;
+
 #define MAX_SIZE 100
 
 //Stack Type scope

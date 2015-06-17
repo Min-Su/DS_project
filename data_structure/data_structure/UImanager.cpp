@@ -3,7 +3,6 @@ using namespace std;
 
 #include"UImanager.h"
 
-
 UImanager::UImanager() {
 	this->input = 0;
 }
@@ -28,6 +27,9 @@ void UImanager::run() {
 
 		switch(this->input) {
 			case 1 : 
+				stack = new Stackmanager();
+				stack->run();
+				delete stack;
 				break;
 
 			case 2 :
