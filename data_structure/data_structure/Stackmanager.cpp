@@ -11,7 +11,7 @@ void Stackmanager::menu() {
 	cout << "Input Number >>" << endl;
 }
 
-void Stackmanager::input_Number() {
+void Stackmanager::input_Number() {	
 	cin >> this->input;
 }
 
